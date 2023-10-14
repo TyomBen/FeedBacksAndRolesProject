@@ -28,7 +28,7 @@ class RouteServiceProvider extends ServiceProvider
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
         RateLimiter::for('feedback', function (Request $request) {
-            return Limit::perDay(1)->by($request->ip());
+            return Limit::perDay(1)->by($request->user()->id);
         });
 
         $this->routes(function () {
