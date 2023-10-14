@@ -1,5 +1,4 @@
 @foreach ($user->feedback as $feedback)
-    ID: {{ $feedback->id }}
     Name: {{ $feedback->name }}
     Email: {{ $user->email }}
     Subject: {{ $feedback->subject }}
