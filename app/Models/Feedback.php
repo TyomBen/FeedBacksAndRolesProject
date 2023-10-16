@@ -17,11 +17,6 @@ class Feedback extends Model
         'message',
         'admin_mark'
     ];
-
-    public function answer () : HasMany
-    {
-        return $this->hasMany(Answer::class);
-    }
     public function user () : BelongsTo
     {
         return $this->belongsTo(User::class);
